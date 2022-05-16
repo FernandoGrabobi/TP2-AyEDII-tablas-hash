@@ -2,6 +2,7 @@
  * EJERCICIO 12.1 - Pag 348 y 349
  * Función hash: Método de la mitad del cuadrado
  * Original code from ESTRUCTURAS DE DATOS EN JAVA 
+ * Creadores del codigo: Grabobi Fernando-Mendoza Jeremias-Ferro Marco
  */
 import java.io.*;
 
@@ -31,12 +32,10 @@ class Main {
   static int dispersion(Double x) {
 	 Double t,k;
    int resultado;
-    t = 0.0;
-    k = 0.0;
-    t = (Double)(Math.pow(x,2));
+    t = Math.pow(x,2);
     System.out.println("suma de valores: "+t);
-    k = t / 1000;
-    resultado = (int)(k % 1000);
+    k = t / 1000; /// Nos permite elegir los 3 digitos que nos convenga del numero
+    resultado = (int)(t % 1000); /// nos devuelve el modulo del numero obteniendo 3 digitos  de tipo entero 
     return resultado;
   }
 
